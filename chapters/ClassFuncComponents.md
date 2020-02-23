@@ -1,4 +1,4 @@
-### Class Components and Functional Components
+### Class-based Components and Functional Components
 
 1. Example of work:
 
