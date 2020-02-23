@@ -2,7 +2,7 @@
 
 1. Example of work:
 
-* Stateless (Class) Component:
+* Stateless (Class-based) Component:
 
 ```jsx
 export class MyComponentClass extends React.Component {
@@ -22,7 +22,7 @@ export const MyComponentClass = () => {
 
 2. Work with props:
 
-* Stateless (Class) Component:
+* Stateless (Class-based) Component:
 
 ```jsx
 export class MyComponentClass extends React.Component {
