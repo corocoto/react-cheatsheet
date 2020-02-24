@@ -27,4 +27,5 @@ This repo is contains some useful opportunities for work with React.js library.
         * [`componentDidUpdate`](%20chapters/lifecycle_methods/types/updating/componentDidUpdate.md)
     * [Unmounting Lifecycle Methods](%20chapters/lifecycle_methods/types/unmounting/UnmountingLifecycleMethods.md):
         * [`componentWillUnmount`]()
-        
+9. Hooks:
+    * [`useState`](%20chapters/hooks/useState.md)        
