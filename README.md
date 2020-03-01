@@ -31,4 +31,5 @@ This repo is contains some useful opportunities for work with React.js library.
     * [`useState`](%20chapters/hooks/useState.md)   
 10. Styling:
     * [Dynamic styling components](%20chapters/styling/dynamic_styling.md)  
-    * [Using pseudo classes, pseudo elements and media queries in inline styles](%20chapters/styling/radium.md)      
+    * [Using pseudo classes, pseudo elements and media queries in inline styles](%20chapters/styling/radium.md) 
+    * [`styled-components` library](%20chapters/styling/styled-components.md)     
