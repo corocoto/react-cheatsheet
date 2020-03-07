@@ -38,7 +38,7 @@ After we found this block of code. We'll modify this object, so it'll be look li
 }
 ````
 
-3. In `Post.css `file writes something like this:
+3. In `Post.module.css `file writes something like this:
 ```css
 .Post {
     color: red;
@@ -47,7 +47,7 @@ After we found this block of code. We'll modify this object, so it'll be look li
 
 And in `Post Component` file writes next code:
 ```jsx
-import classes from './Post.css';
+import classes from './Post.module.css';
  
 const post = () => (
     <div className={classes.Post}>...</div>
