@@ -1,10 +1,10 @@
 ### Adding isolating styles using CSS Modules
 
-For opportunity adding isolating styles, that will be work like native web-components styles, we are need using a force of CSS Modules.
+With CSS modules, you can write normal CSS code and make sure, that it only applies to a given component.
 
-> It be generates uniques class names on output.
+It's not using magic for that, instead it'll simply automatically generate unique CSS class names for you. And by importing a JS object and assigning classes from there, you use these dynamically generated, unique names. So the imported JS object simply exposes some properties which hold the generated CSS class names as values.
 
-**Let's get started!**
+**Let's doing it!**
 
 1. First, that we will doing - are run next command:
 
@@ -38,29 +38,33 @@ After we found this block of code. We'll modify this object, so it'll be look li
 }
 ````
 
-3. After that, we are should using next syntax for importing necessary styles:
-
-```js
-import classes from './Person.css';
+3. In `Post.css `file writes something like this:
+```css
+.Post {
+    color: red;
+}
 ```
 
-So our CSS blocks with styles state `classes`'s properties. And we are applying our styles in the following way:
-
+And in `Post Component` file writes next code:
 ```jsx
-import React from "react";
-import classes from './Person.css';
-
-const Person = (props) => {
-    return (
-        <div className={classes.Person}>
-            <h2 onClick={props.onClick}>I'm {props.name} and I'm {props.age} years old!</h2>
-            {props.children && <p>{props.children}</p>}
-            <input type="text" onChange={props.onChange} value={props.name}/>
-        </div>
-    );
-};
-
-export default Person;
+import classes from './Post.css';
+ 
+const post = () => (
+    <div className={classes.Post}>...</div>
+);
 ```
 
-And it's pretty work.
+Here, `classes.Post`  refers to an automatically generated `Post` property on the imported classes  object. That property will in the end simply hold a value like `Post__Post__ah5_1`.
+
+So your `.Post` class was automatically transformed to a different class (`Post__Post__ah5_1`) which is unique across the application. 
+You also can't use it accidentally in other components, because you don't know the generated string! You can only access it through the classes object. And if you import the CSS file (in the same way) in another component, the classes  object there will hold a `Post` property which yields a different (!) CSS class name. Hence it's scoped to a given component.
+
+By the way, if you somehow also want to define a `global` (i.e. un-transformed) CSS class in such a `.css` file, you can prefix the selector with `:global`.
+
+Example for this case:
+
+```css
+:global .Post { ... } 
+```
+
+Now you can use `className="Post"` anywhere in your app and receive that styling.
