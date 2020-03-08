@@ -36,3 +36,4 @@ This repo is contains some useful opportunities for work with React.js library.
     * [Adding isolating styles using CSS Modules](%20chapters/styling/css_modules.md)   
 11. Debugging React Apps:
     * [Error Boundary](%20chapters/debug/error_boundary.md)
+12. [React Application Structure](%20chapters/structure/app_structure.md)
