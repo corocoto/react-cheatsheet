@@ -68,3 +68,52 @@ Example for this case:
 ```
 
 Now you can use `className="Post"` anywhere in your app and receive that styling.
+
+
+### Some cool features
+
+* **The `composes` keyword**
+
+Let’s imagine, that we have a module called `type.css` for our text styles. In that file we might have the following:
+
+```css
+.serif-font {
+  font-family: Georgia, serif;
+}
+
+.display {
+  composes: serif-font;
+  font-size: 30px;
+  line-height: 35px;
+}
+```
+
+We would declare one of those classes in our template like so:
+
+```jsx
+import type from "./type.css";
+
+element.innerHTML = 
+  `<h1 class="${type.display}">
+    This is a heading
+  </h1>`;
+```
+
+This would result in markup like:
+
+```html
+<h1 class="_type__display_0980340 _type__serif_404840">
+  Heading title
+</h1>
+```
+
+> Both classes have been bound to the element by the use of the `composes` keyword
+
+So we can even compose from a specific class in a separate CSS file:
+
+```css   
+.element {
+    composes: dark-red from "./colors.css";
+    font-size: 30px;
+    line-height: 1.2;
+}
