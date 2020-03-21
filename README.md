@@ -38,3 +38,5 @@ This repo is contains some useful opportunities for work with React.js library.
 11. Debugging React Apps:
     * [Error Boundary](%20chapters/debug/error_boundary.md)
 12. [React Application Structure](%20chapters/structure/app_structure.md)
+13. Optimizations:
+    * [React.memo](%20chapters/optimization/react_memo.md)
