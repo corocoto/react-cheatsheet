@@ -41,3 +41,4 @@ This repo is contains some useful opportunities for work with React.js library.
 13. Optimizations:
     * [React.memo](%20chapters/optimization/react_memo.md)
     * [React.Component vs React.PureComponent](%20chapters/optimization/component_vs_purecomponent.md)
+14. [Ref](%20chapters/ref/ref.md)
