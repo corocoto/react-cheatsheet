@@ -30,6 +30,7 @@ This repo is contains some useful opportunities for work with React.js library.
 9. Hooks:
     * [`useState`](%20chapters/hooks/useState.md) 
     * [`useEffect`](%20chapters/hooks/useEffect.md)
+    * [`useRef`](%20chapters/hooks/useRef.md)
 10. Styling:
     * [Dynamic styling components](%20chapters/styling/dynamic_styling.md)  
     * [Using pseudo classes, pseudo elements and media queries in inline styles](%20chapters/styling/radium.md) 
