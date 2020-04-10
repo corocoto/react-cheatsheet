@@ -16,7 +16,8 @@ This repo is contains some useful opportunities for work with React.js library.
 8. Lifecycle methods:
     * [What's a Lifecycle Method?](%20chapters/lifecycle_methods/LifecycleMethodsDescr.md)
     * [Mounting Lifecycle Methods](%20chapters/lifecycle_methods/types/mounting/MountingLifecycleMethods.md):
-        * [`componentWillMount`](%20chapters/lifecycle_methods/types/mounting/componentWillMount.md)
+        * [`constructor`](%20chapters/lifecycle_methods/types/mounting/constructor.md)
+        * [`static getDerivedStateFromProps`](%20chapters/lifecycle_methods/types/mounting/getDerivedStateFromProps.md)
         * [`render`](%20chapters/lifecycle_methods/types/mounting/render.md)
         * [`componentDidMount`](%20chapters/lifecycle_methods/types/mounting/componentDidMount.md)
     * [Updating Lifecycle Methods](%20chapters/lifecycle_methods/types/updating/UpdatingLifecycleMethods.md):

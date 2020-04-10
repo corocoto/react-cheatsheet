@@ -1,4 +1,4 @@
-### `componentDidMount`
+## `componentDidMount`
 
 The final mounting lifecycle method is called `componentDidMount`.
 

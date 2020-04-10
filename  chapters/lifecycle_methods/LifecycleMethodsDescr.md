@@ -1,4 +1,4 @@
-### What's a Lifecycle Method?
+## What's a Lifecycle Method?
 
 Lifecycle methods are methods that get called at certain moments in a component’s life.
 
@@ -10,7 +10,7 @@ You can attach lifecycle methods to a lot of different moments in a component’
 
 
 There are three categories of lifecycle methods: 
-* Mounting
+* [Mounting](types/mounting/MountingLifecycleMethods.md)
 * Updating
 * Unmounting
 
