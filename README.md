@@ -12,7 +12,7 @@ This repo is contains some useful opportunities for work with React.js library.
 4. [Class-based Components and Functional Components](%20chapters/ClassFuncComponents.md)
 5. [`props.children`](%20chapters/props_children.md)
 6. [`defaultProps`](%20chapters/defaultProps.md)
-7. [`propTypes`](%20chapters/propTypes.md)
+7. [`PropTypes`]( chapters/PropTypes.md)
 8. Lifecycle methods:
     * [What's a Lifecycle Method?](%20chapters/lifecycle_methods/LifecycleMethodsDescr.md)
     * [Mounting Lifecycle Methods](%20chapters/lifecycle_methods/types/mounting/MountingLifecycleMethods.md):
