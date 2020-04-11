@@ -27,7 +27,7 @@ This repo is contains some useful opportunities for work with React.js library.
         * [`getSnapshotBeforeUpdate`](%20chapters/lifecycle_methods/types/updating/getSnapshotBeforeUpdate.md)
         * [`componentDidUpdate`](%20chapters/lifecycle_methods/types/updating/componentDidUpdate.md)
     * [Unmounting Lifecycle Methods](%20chapters/lifecycle_methods/types/unmounting/UnmountingLifecycleMethods.md):
-        * [`componentWillUnmount`]()
+        * [`componentWillUnmount`](%20chapters/lifecycle_methods/types/unmounting/componentWillUnmount.md)
 9. Hooks:
     * [`useState`](%20chapters/hooks/useState.md) 
     * [`useEffect`](%20chapters/hooks/useEffect.md)

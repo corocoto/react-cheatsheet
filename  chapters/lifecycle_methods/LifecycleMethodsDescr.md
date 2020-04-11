@@ -11,7 +11,7 @@ You can attach lifecycle methods to a lot of different moments in a component’
 
 There are three categories of lifecycle methods: 
 * [Mounting](types/mounting/MountingLifecycleMethods.md)
-* Updating
-* Unmounting
+* [Updating](types/updating/UpdatingLifecycleMethods.md)
+* [Unmounting](types/unmounting/UnmountingLifecycleMethods.md)
 
 We will be consider each of them! 
