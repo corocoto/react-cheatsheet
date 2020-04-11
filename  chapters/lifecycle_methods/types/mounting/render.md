@@ -1,4 +1,4 @@
-## `render`
+## `render()`
 
 `render` is one mandatory method on the class-based component.
 

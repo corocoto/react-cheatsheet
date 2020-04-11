@@ -1,4 +1,4 @@
-### `shouldComponentUpdate`
+## `shouldComponentUpdate(nextProps, nextState)`
 
 The second updating lifecycle method is called `shouldComponentUpdate`.
 

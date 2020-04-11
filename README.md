@@ -21,10 +21,10 @@ This repo is contains some useful opportunities for work with React.js library.
         * [`render`](%20chapters/lifecycle_methods/types/mounting/render.md)
         * [`componentDidMount`](%20chapters/lifecycle_methods/types/mounting/componentDidMount.md)
     * [Updating Lifecycle Methods](%20chapters/lifecycle_methods/types/updating/UpdatingLifecycleMethods.md):
-        * [`componentWillReceiveProps`](%20chapters/lifecycle_methods/types/updating/componentWillReceiveProps.md)
+        * [`static getDerivedStateFromProps`](%20chapters/lifecycle_methods/types/mounting/getDerivedStateFromProps.md)
         * [`shouldComponentUpdate`](%20chapters/lifecycle_methods/types/updating/shouldComponentUpdate.md)
-        * [`componentWillUpdate`](%20chapters/lifecycle_methods/types/updating/componentWillUpdate.md)
         * [`render`](%20chapters/lifecycle_methods/types/mounting/render.md)
+        * [`getSnapshotBeforeUpdate`](%20chapters/lifecycle_methods/types/updating/getSnapshotBeforeUpdate.md)
         * [`componentDidUpdate`](%20chapters/lifecycle_methods/types/updating/componentDidUpdate.md)
     * [Unmounting Lifecycle Methods](%20chapters/lifecycle_methods/types/unmounting/UnmountingLifecycleMethods.md):
         * [`componentWillUnmount`]()

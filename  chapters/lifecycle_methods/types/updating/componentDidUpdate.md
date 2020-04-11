@@ -1,12 +1,13 @@
-### `componentDidUpdate`
+## `componentDidUpdate(prevProps, prevState, snapshot)`
 
 The last updating lifecycle method is `componentDidUpdate`.
 
-When a component instance updates, `componentDidUpdate` gets called after any rendered HTML has finished loading.
+When a component instance updates `componentDidUpdate` gets called after any rendered HTML has finished loading.
 
-`componentDidUpdate` automatically gets passed two arguments: 
+`componentDidUpdate` automatically gets passed three arguments: 
 * `prevProps`
 * `prevState`
+* `snapshot` (optional)
 
 `prevProps` and `prevState` are references to the component’s `props` and `state` before the current updating period began. You can compare them to the current `props` and `state`.
 
