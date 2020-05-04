@@ -1,15 +1,19 @@
 # React.js tips and tricks cheatsheet
 
+[EN]
 This repo is contains some useful opportunities for work with React.js library.
+
+[RU]
+Этот репозиторий содержит некоторые полезные возможности для работы с библиотекой React.js.
 
 ### Chapters
 
-1. [Creating component](%20chapters/CreateComponent.md)
-2. [Briefly about `state` and `props`](%20chapters/state_props.md)
-3. Patterns: 
-    * [Stateless and Stateful Components](%20chapters/patterns/StatelessStatefulComponents.md)
-    * [Controlled and Uncontrolled Components](%20chapters/patterns/ControlledUncontrolledComponents.md)
-4. [Class-based Components and Functional Components](%20chapters/ClassFuncComponents.md)
+1. [Creating component (Создание компонента)](%20chapters/CreateComponent.md)
+2. [Briefly about `state` and `props` (Кратко о `state` и `props`)](%20chapters/state_props.md)
+3. Patterns (Паттерны): 
+    * [Stateless and Stateful Components (Stateless и Stateful Компоненты)](%20chapters/patterns/StatelessStatefulComponents.md)
+    * [Controlled and Uncontrolled Component (Контролируемые  и Неконтролируемые Компоненты)](%20chapters/patterns/ControlledUncontrolledComponents.md)
+4. [Class-based Components and Functional Components (Классовые и Функциональные Компоненты)](%20chapters/ClassFuncComponents.md)
 5. [`props.children`](%20chapters/props_children.md)
 6. [`defaultProps`](%20chapters/defaultProps.md)
 7. [`PropTypes`]( chapters/PropTypes.md)
@@ -35,6 +39,8 @@ This repo is contains some useful opportunities for work with React.js library.
     * [`useState`](%20chapters/hooks/useState.md) 
     * [`useEffect`](%20chapters/hooks/useEffect.md)
     * [`useRef`](%20chapters/hooks/useRef.md)
+    * useContext
+    * useMemo
 10. Styling:
     * [Dynamic styling components](%20chapters/styling/dynamic_styling.md)  
     * [Using pseudo classes, pseudo elements and media queries in inline styles](%20chapters/styling/radium.md) 
@@ -47,3 +53,16 @@ This repo is contains some useful opportunities for work with React.js library.
     * [React.memo](%20chapters/optimization/react_memo.md)
     * [React.Component vs React.PureComponent](%20chapters/optimization/component_vs_purecomponent.md)
 14. [Ref](%20chapters/ref/ref.md)
+15. [Context](%20chapters/context/context.md)
+16. lazyLoading
+17. Suspense
+18. Single Page Application (SPA)
+    * Link
+    * NavLink
+    * Route
+    * Switch
+    * BrowserRouter
+    * Redirect
+    * Hooks:
+        * withRouter
+19. Redux        

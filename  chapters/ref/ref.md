@@ -1,6 +1,4 @@
-### Ref
-
-
+## Ref
 #### Introduction
 
 Refs allow get an access for DOM-nodes or React-elements, creating on the `render` method.
