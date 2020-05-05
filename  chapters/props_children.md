@@ -49,22 +49,22 @@ However, if a component has only one child, then `this.props.children` will retu
 
 [RU]
 
-Объект `props` каждого компонента имеет свойство названное `children`.
+Объект `props` каждого компонента имеет свойство `children`.
 
 `props.children` будет возвращать все, что находится между открывающим и закрывающим `JSX` тегами компонента.
 
-Ты мог бы написать `<MyComponentClass></MyComponentClass>`, и это может заработать.
+Вы могли бы написать `<MyComponentClass></MyComponentClass>`, и это может заработать.
 
 Рассмотрим пример ниже (`BigButton.js`). 
 
 В примере 1, значение `this.props.children` компонента `<BigButton>` может быть равным следующему тексту: `“I am a child of BigButton.”`
 
-In Example 2, `<BigButton>`‘s `this.props.children` would equal a `<LilButton />` component.
+В примере 2, значение `this.props.children` компонента `<BigButton>` может быть равным компоненту `<LilButton />`.
 
-In Example 3, `<BigButton>`‘s `this.props.children` would equal `undefined`.
+В примере 3, значение `this.props.children` компонента `<BigButton>` может быть равным  `undefined`.
 
-If a component has more than one child between its `JSX` tags, then `this.props.children` will return those children in an array. 
-However, if a component has only one child, then `this.props.children` will return the single child, not wrapped in an array.
+Если компонент имеет больше, чем один дочерний элемент между `JSX` тегами, `this.props.children` будет возвращать эти дочерние элементы в виде массива. 
+Однако, если компонент имеет только один дочерний элемент, `this.props.children` будет возвращать единственного ребенка, не обернутого в массив.
 
 ```jsx 
   import React from 'react';
@@ -78,18 +78,18 @@ However, if a component has only one child, then `this.props.children` will retu
   }
 
 
-  // Example 1
+  // Пример 1
   <BigButton>
     I am a child of BigButton.
   </BigButton>
 
 
-  // Example 2
+  // Пример 2
   <BigButton>
     <LilButton />
   </BigButton>
 
 
-  // Example 3
+  // Пример 3
   <BigButton />
 ```

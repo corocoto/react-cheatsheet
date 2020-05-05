@@ -16,10 +16,10 @@ This repo is contains some useful opportunities for work with React.js library.
 4. [Class-based Components and Functional Components (Классовые и Функциональные Компоненты)](%20chapters/ClassFuncComponents.md)
 5. [`props.children`](%20chapters/props_children.md)
 6. [`defaultProps`](%20chapters/defaultProps.md)
-7. [`PropTypes`]( chapters/PropTypes.md)
-8. Lifecycle methods:
-    * [What's a Lifecycle Method?](%20chapters/lifecycle_methods/LifecycleMethodsDescr.md)
-    * [Mounting Lifecycle Methods](%20chapters/lifecycle_methods/types/mounting/MountingLifecycleMethods.md):
+7. [`PropTypes`](%20chapters/PropTypes.md)
+8. Lifecycle methods (Методы жизненного цикла):
+    * [What's a Lifecycle Method? (Что такое метод жизненного цикла?)](%20chapters/lifecycle_methods/LifecycleMethodsDescr.md)
+    * [Mounting Lifecycle Methods (Монтирующие методы жизненного цикла)](%20chapters/lifecycle_methods/types/mounting/MountingLifecycleMethods.md):
         * [`constructor`](%20chapters/lifecycle_methods/types/mounting/constructor.md)
         * [`static getDerivedStateFromProps`](%20chapters/lifecycle_methods/types/mounting/getDerivedStateFromProps.md)
         * [`render`](%20chapters/lifecycle_methods/types/mounting/render.md)
