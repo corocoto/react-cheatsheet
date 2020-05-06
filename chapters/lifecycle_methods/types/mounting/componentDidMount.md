@@ -14,7 +14,7 @@ If your React app uses AJAX to fetch initial data from an API, then `componentDi
 
 Финальный монтирующий метод жизненного цикла называется `componentDidMount`.
 
-Когда отрисовка компонента происходит в первый раз, `componentDidMount` вызывается сразу после завершения загрузки HTML из` render`.
+Когда отрисовка компонента происходит в первый раз, `componentDidMount` вызывается сразу после завершения загрузки HTML из метода `render`.
 
 `componentDidMount` используется во множестве случаев!
 
