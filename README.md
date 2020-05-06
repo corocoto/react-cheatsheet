@@ -24,7 +24,7 @@ This repo is contains some useful opportunities for work with React.js library.
         * [`static getDerivedStateFromProps`](%20chapters/lifecycle_methods/types/mounting/getDerivedStateFromProps.md)
         * [`render`](%20chapters/lifecycle_methods/types/mounting/render.md)
         * [`componentDidMount`](%20chapters/lifecycle_methods/types/mounting/componentDidMount.md)
-    * [Updating Lifecycle Methods (Обновляющие методы жизненного цикла)](%20chapters/lifecycle_methods/types/updating/UpdatingLifecycleMethods.md):
+    * [Updating Lifecycle Methods (Обновляющие методы жизненного цикла)](chapters/lifecycle_methods/types/updating/UpdatingLifecycleMethods.md):
         * [`static getDerivedStateFromProps`](%20chapters/lifecycle_methods/types/mounting/getDerivedStateFromProps.md)
         * [`shouldComponentUpdate`](%20chapters/lifecycle_methods/types/updating/shouldComponentUpdate.md)
         * [`render`](%20chapters/lifecycle_methods/types/mounting/render.md)
