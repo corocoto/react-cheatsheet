@@ -18,4 +18,4 @@ If your React app uses AJAX to fetch initial data from an API, then `componentDi
 
 `componentDidMount` используется во множестве случаев!
 
-Если ваше React-приложение использует AJAX для получения первоначальных данных из API, тогда `componentDidMount` - это место, предназначенное для вызова AJAX. Обобщенно, `componentDidMount` является хорошим местом для соединения React-приложения со сторонними приложениями, таких как веб API или JavaScript-фреймворки. `componentDidMount` также является местом для установки таймеров, используя для этого `setTimeout` или `setInterval`.
+Если ваше React-приложение использует AJAX для получения первоначальных данных из API, тогда `componentDidMount` - это место, предназначенное для вызова AJAX. Обобщенно, `componentDidMount` является хорошим местом для соединения React-приложения со сторонними приложениями, таких как веб API или JavaScript-фреймворки. `componentDidMount` также является местом для установки таймеров, используя для таких случаев `setTimeout` или `setInterval`.
