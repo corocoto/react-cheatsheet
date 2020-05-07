@@ -51,19 +51,19 @@ However, if a component has only one child, then `this.props.children` will retu
 
 Объект `props` каждого компонента имеет свойство `children`.
 
-`props.children` будет возвращать все, что находится между открывающим и закрывающим `JSX` тегами компонента.
+`props.children` будет возвращать все что находится между открывающим и закрывающим `JSX` тегами компонента.
 
-Вы могли бы написать `<MyComponentClass></MyComponentClass>`, и это может заработать.
+Вы можете написать `<MyComponentClass></MyComponentClass>`, и это будет работать.
 
 Рассмотрим пример ниже (`BigButton.js`). 
 
-В примере 1, значение `this.props.children` компонента `<BigButton>` может быть равным следующему тексту: `“I am a child of BigButton.”`
+В примере 1, значение `this.props.children` компонента `<BigButton>` будет равно следующему тексту: `“I am a child of BigButton.”`
 
-В примере 2, значение `this.props.children` компонента `<BigButton>` может быть равным компоненту `<LilButton />`.
+В примере 2, значение `this.props.children` компонента `<BigButton>` будет равным компоненту `<LilButton />`.
 
-В примере 3, значение `this.props.children` компонента `<BigButton>` может быть равным  `undefined`.
+В примере 3, значение `this.props.children` компонента `<BigButton>` будет равным `undefined`.
 
-Если компонент имеет больше, чем один дочерний элемент между `JSX` тегами, `this.props.children` будет возвращать эти дочерние элементы в виде массива. 
+Если компонент имеет более одного дочернего элемента между `JSX` тегами, `this.props.children` будет возвращать их в виде массива. 
 Однако, если компонент имеет только один дочерний элемент, `this.props.children` будет возвращать единственного ребенка, не обернутого в массив.
 
 ```jsx 
