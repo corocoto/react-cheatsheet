@@ -24,4 +24,4 @@ When a component mounts, it automatically calls these methods, in order.
 * [`render`](render.md)
 * [`componentDidMount`](componentDidMount.md)
 
-Когда компонент примонтируется, он автоматически вызвает эти методы по порядку.
+Когда компонент примонтируется, он автоматически вызывает эти методы по порядку.

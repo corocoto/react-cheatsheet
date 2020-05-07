@@ -23,13 +23,13 @@ This repo is contains some useful opportunities for work with React.js library.
         * [`constructor`](%20chapters/lifecycle_methods/types/mounting/constructor.md)
         * [`static getDerivedStateFromProps`](%20chapters/lifecycle_methods/types/mounting/getDerivedStateFromProps.md)
         * [`render`](%20chapters/lifecycle_methods/types/mounting/render.md)
-        * [`componentDidMount`]( chapters/lifecycle_methods/types/mounting/componentDidMount.md)
-    * [Updating Lifecycle Methods (Обновляющие методы жизненного цикла)]( chapters/lifecycle_methods/types/updating/UpdatingLifecycleMethods.md):
+        * [`componentDidMount`](%20chapters/lifecycle_methods/types/mounting/componentDidMount.md)
+    * [Updating Lifecycle Methods (Обновляющие методы жизненного цикла)](%20chapters/lifecycle_methods/types/updating/UpdatingLifecycleMethods.md):
         * [`static getDerivedStateFromProps`](%20chapters/lifecycle_methods/types/mounting/getDerivedStateFromProps.md)
         * [`shouldComponentUpdate`](%20chapters/lifecycle_methods/types/updating/shouldComponentUpdate.md)
         * [`render`](%20chapters/lifecycle_methods/types/mounting/render.md)
-        * [`getSnapshotBeforeUpdate`]( chapters/lifecycle_methods/types/updating/getSnapshotBeforeUpdate.md)
-        * [`componentDidUpdate`]( chapters/lifecycle_methods/types/updating/componentDidUpdate.md)
+        * [`getSnapshotBeforeUpdate`](%20chapters/lifecycle_methods/types/updating/getSnapshotBeforeUpdate.md)
+        * [`componentDidUpdate`](%20chapters/lifecycle_methods/types/updating/componentDidUpdate.md)
     * [Unmounting Lifecycle Methods (Размонтирующие методы жизненного цикла)](%20chapters/lifecycle_methods/types/unmounting/UnmountingLifecycleMethods.md):
         * [`componentWillUnmount`](%20chapters/lifecycle_methods/types/unmounting/componentWillUnmount.md)
     * [Errors Handle: (Обработка ошибок:)](%20chapters/lifecycle_methods/types/errors/errors_handle.md)
