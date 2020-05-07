@@ -6,7 +6,7 @@ This repo is contains some useful opportunities for work with React.js library.
 [RU]
 Этот репозиторий содержит некоторые полезные возможности для работы с библиотекой React.js.
 
-### Chapters
+### Chapters (Главы)
 
 1. [Creating component (Создание компонента)](%20chapters/CreateComponent.md)
 2. [Briefly about `state` and `props` (Кратко о `state` и `props`)](%20chapters/state_props.md)
