@@ -13,8 +13,8 @@ You can attach lifecycle methods to a lot of different moments in a component’
 
 There are three categories of lifecycle methods: 
 * [Mounting](types/mounting/MountingLifecycleMethods.md)
-* [Updating](types/updating/UpdatingLifecycleMethods.md)
-* [Unmounting](types/unmounting/UnmountingLifecycleMethods.md)
+* [Updating](/chapters/lifecycle_methods/types/updating/UpdatingLifecycleMethods.md)
+* [Unmounting](/chapters/lifecycle_methods/types/unmounting/UnmountingLifecycleMethods.md)
 
 We will be consider each of them! 
 
@@ -30,7 +30,7 @@ We will be consider each of them!
 
 Здесь представлены три категории методов жизненного цикла: 
 * [Монтирование](types/mounting/MountingLifecycleMethods.md)
-* [Обновление](types/updating/UpdatingLifecycleMethods.md)
-* [Размонтирование](types/unmounting/UnmountingLifecycleMethods.md)
+* [Обновление](/chapters/lifecycle_methods/types/updating/UpdatingLifecycleMethods.md)
+* [Размонтирование](/chapters/lifecycle_methods/types/unmounting/UnmountingLifecycleMethods.md)
 
 Мы будем рассматривать каждый из них!
