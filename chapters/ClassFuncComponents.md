@@ -1,4 +1,4 @@
-### Class-based Components and Functional Components (Классовые и Функциональные Компоненты)
+## Class-based Components and Functional Components (Классовые и Функциональные Компоненты)
 
 [EN] 
 
