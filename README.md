@@ -32,10 +32,11 @@ This repo is contains some useful opportunities for work with React.js library.
         * [`componentDidUpdate`](%20chapters/lifecycle_methods/types/updating/componentDidUpdate.md)
     * [Unmounting Lifecycle Methods (Размонтирующие методы жизненного цикла)](%20chapters/lifecycle_methods/types/unmounting/UnmountingLifecycleMethods.md):
         * [`componentWillUnmount`](%20chapters/lifecycle_methods/types/unmounting/componentWillUnmount.md)
-    * [Errors Handle: (Обработка ошибок:)](%20chapters/lifecycle_methods/types/errors/errors_handle.md)
+    * [Errors Handle (Обработка ошибок):](%20chapters/lifecycle_methods/types/errors/errors_handle.md)
         * [`static getDerivedStateFromError`](%20chapters/lifecycle_methods/types/errors/getDerivedStateFromError.md)
         * [`componentDidCatch`](%20chapters/lifecycle_methods/types/errors/componentDidCatch.md)
 9. Hooks (Хуки):
+    * [What're Hooks? (Что такое хуки?)](%20chapters/hooks/hooks.md)
     * [`useState`](%20chapters/hooks/useState.md) 
     * [`useEffect`](%20chapters/hooks/useEffect.md)
     * [`useRef`](%20chapters/hooks/useRef.md)

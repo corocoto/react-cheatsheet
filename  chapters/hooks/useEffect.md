@@ -1,4 +1,6 @@
-### useEffect
+## useEffect
+
+[EN]
 
 `useEffect` allows us to running side effects at functional component:
 
@@ -188,6 +190,210 @@ useEffect(() => {
 >If you have some elements in array, React will running pur effect, on the time, when one of the elements will be change.
 
 It's also work for effect with reset step:
+
+```jsx
+useEffect(() => {
+  function handleStatusChange(status) {
+    setIsOnline(status.isOnline);
+  }
+
+  ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+  return () => {
+    ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+  };
+}, [props.friend.id]); // Повторно подписаться, только если props.friend.id изменился
+```
+
+[RU]
+
+`useEffect` позволяет нам запускать побочные эффекты в функциональном компоненте:
+
+>**Примечание** 
+>Если вы знакомы с классовыми методами жизненного цикла, тогда хук `useEffect` представляет комбинацию методов `componentDidMount` и `componentDidUpdate`.
+>Так мы можем сказать, что `useEffect` будет запускаться после отрисовки.
+
+Для большего понимания, давайте рассмотрим пример классового и функционального компонента, которые будут выполять те же вещи. Также мы попытаемся сравнить их, и найти отличия между ними.
+
+### Эффекты без сброса
+
+**Пример 1:**
+
+* **Классовый компонент**:
+
+```jsx
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+
+  componentDidMount() {
+    document.title = `Вы нажали ${this.state.count} раз`;
+  }
+
+  componentDidUpdate() {
+    document.title = `Вы нажали ${this.state.count} раз`;
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Вы нажали {this.state.count} раз</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Нажми на меня
+        </button>
+      </div>
+    );
+  }
+}
+```
+
+>**Примечание:** Мы можем видеть, что код дублируется (посмотрите на код в методах `componentDidMount` и `componentDidUpdate`). Это не хорошо. Но у нас есть альтернатива.
+
+* **Функциональный компонент**:
+
+```jsx
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `Вы нажали ${count} раз`;
+  });
+
+  return (
+    <div>
+      <p>Вы нажали {count} раз</p>
+      <button onClick={() => setCount(count + 1)}>
+        Нажми на меня
+      </button>
+    </div>
+  );
+}
+```
+
+Этот пример выглядит лучше.
+
+>**Так что же делает `useEffect`?**
+>Вы говорите React'у, что он будет делать что-то после отрисовки, используя этот хук. 
+>React запоминает функцию (т.е. "эффект"), который вы отправили и запускает его после всех соврешенных изменений в DOM.
+
+
+### Эффекты со сбросом
+
+Ранее мы рассмотрели подочные эффекты, которые не требуют сброса. Однако, есть случаи, когда сброс необходим. Например, у нас может быть потребность в налчиии слушателя на какой-то внешний источник данных. В этом случае очень важно запустить сброс, чтобы не было утечек памяти.
+
+Давайте рассмотрим примеры, в которых это реализовано:
+
+* **Классовый компонент**:
+
+```jsx
+class FriendStatus extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isOnline: null };
+    this.handleStatusChange = this.handleStatusChange.bind(this);
+  }
+
+  componentDidMount() {
+    ChatAPI.subscribeToFriendStatus(
+      this.props.friend.id,
+      this.handleStatusChange
+    );
+  }
+
+  componentWillUnmount() {
+    ChatAPI.unsubscribeFromFriendStatus(
+      this.props.friend.id,
+      this.handleStatusChange
+    );
+  }
+
+  handleStatusChange(status) {
+    this.setState({
+      isOnline: status.isOnline
+    });
+  }
+
+  render() {
+    if (this.state.isOnline === null) {
+      return 'Загрузка...';
+    }
+    return this.state.isOnline ? 'В сети' : 'Не в сети';
+  }
+}
+```
+
+>В React классе, обычно, устнавливается слушатель в методе `componentDidMount`, а сбрасывается в `componentWillUnmount`.
+
+* **Функциональный компонент**
+
+Давайте посмотрим, как этот компонент выглядит, если он будет написан с использованием хуков.
+
+```jsx
+import React, { useState, useEffect } from 'react';
+
+function FriendStatus(props) {
+  const [isOnline, setIsOnline] = useState(null);
+
+  useEffect(() => {
+    function handleStatusChange(status) {
+      setIsOnline(status.isOnline);
+    }
+
+    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+    // Указываем, как сбросить этот эффект:
+    return function cleanup() {
+      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+    };
+  });
+
+  if (isOnline === null) {
+    return 'Загрузка...';
+  }
+  return isOnline ? 'В сети' : 'Не в сети';
+}
+```
+
+>**Примечание:** Если ваш эффект возвращает функцию, тогда React запустит только её, когда придет время сброса того самого эффекта.
+
+### Совет: оптимизация производительности за счет пропуска эффектов
+
+В некоторых случаях сброс или запуск эффекта при каждой отрисовке может вызвать проблемы с производительностью. В классовых компонентах, мы можем решить их, используя дополнительное сравнение `prevProps` или `prevState` внутри метода `componentDidUpdate`:
+
+```jsx
+componentDidUpdate(prevProps, prevState) {
+  if (prevState.count !== this.state.count) {
+    document.title = `Вы нажали ${this.state.count} раз`;
+  }
+}
+```
+
+Но это будет запускаться внутри классового компонента, но никак не в функциональном.
+Но функциональный компонент обладает схожей вещью. Она содержится внутри хука `useEffect`. 
+Вы можете сделать так, что React пропустит вызов эффекта, если некоторые значения остались нетронутыми между последующими отрисовками.
+
+Для того, чтобы сделать это, передайте массив в `useEffect` в качестве второго необязательного аргумента.
+
+```jsx
+useEffect(() => {
+  document.title = `Вы нажали ${count} раз`;
+}, [count]); // Перезапускать эффект только если count поменялся
+```
+
+>**Примечание**: В этом примере мы передаем `[count]` в качестве второго аргумента. 
+>
+>Что это хначит? 
+>Это значит, что если `count` будет равен `5` и у нашего компонента произойдет переотрисовка с тем же значением (`count` = `5`). React будет сравнивать значение `[5]` из предыдущей отрисовки и значение`[5]` из следующей. Так как высе элементы массива остались без изменений, React пропустит этот эффект. Это является оптимизацией данного процесса.
+>
+>Когда наша переменная `count` обновится до `6` при следующей отрисовке, React сравнит элементы массива `[5]` из предыдущей отрисовки и `[6]` из следующей. В данном случае, React запустит наш эффект, потому что `5 !== 6`.
+>
+>Если у вас есть некоторые элементы в массиве, React будет запускать pur-эффект в то время, когда один из элементов будет изменен.
+
+Это также работает для эффекта с шагом сброса:
 
 ```jsx
 useEffect(() => {

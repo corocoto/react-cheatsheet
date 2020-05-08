@@ -1,4 +1,6 @@
-### `useState`
+## `useState`
+
+[EN]
 
 #### Introduction
 
@@ -8,7 +10,7 @@
 
 The `useState` (state) hook is equivalent of `this.state`/`this.setSate` for functional components.
 
-#### Declare this `hook`
+#### Declare this hook
 
 1. `useState` is a named `export` from `react` so to use it, you can write:
 ```jsx
@@ -78,6 +80,97 @@ const [personsState, setPersonsState] = useState({
 
 
 /*after that, personState will object, which contains persons property only*/
+setPersonState({
+    [
+        {name: "Maximilian", age: 29},
+        {name: "Andrew", age: 22},
+        {name: "Alice", age: 24}
+    ]
+});
+```
+
+[RU]
+
+#### Введение
+
+`useState` - это хук, который позволяет вам иметь переменную состояния в функциональных компонентах.
+
+**Примечание**: Начиная с версии React 16.8  мы можем использовать хуки, которые являются функциями с именами, начинающимися с `use`, которые добавляют переменные состояния в функциональные компоненты и инструмент методов жизненного цикла классов.
+
+`useState` (state) хук эвивалентен `this.state`/`this.setSate`, использующийся для функциональных компонентов.
+
+#### Объявление этого хука
+
+1. `useState` является именнованным значением из `export`'а  `react`, поэтому, для того, чтобы использовать его, вы можете написать:
+```jsx
+React.useState
+```
+2. Импортирование `useState`:
+```jsx
+import React, { useState } from 'react';
+```
+
+#### Что он содержит внутри?
+
+`useState` не возвращает просто переменную. Он возвращает `массив`, где первый элемент - это стояние переменной, а второй - `функция` для обновления значения переменной. 
+Для таких случаев, обычно используется  **деструктуризация массива**:
+
+```jsx
+const [personsState, setPersonsState] = useState({
+    persons: [
+        {name: "Max", age: 29},
+        {name: "Andrew", age: 22},
+        {name: "Alice", age: 25}
+    ]
+});
+```
+
+В примере выше `pesonState` содержит следующую структуру next structure (первоначальное состояние):
+
+```jsx
+persons: [
+    {name: "Max", age: 29},
+    {name: "Andrew", age: 22},
+    {name: "Alice", age: 25}
+]
+```
+
+А `setPersonsState` содержит внутри себя функцию, которая позволяет обновлять это состояние. Мы можем сказать, что функция `setPersonsState` идентична `this.setState` в классовом компоненте.
+
+#### На что вам необходимо обратить внимание ?
+1. `useState` может быть использован повторно. Что я имею в виду?
+
+```jsx
+const [personsState, setPersonsState] = useState({
+    persons: [
+        {name: "Max", age: 29},
+        {name: "Andrew", age: 22},
+        {name: "Alice", age: 25}
+    ]
+});
+
+const [otherState, setOtherState] = useState({
+    other: 'some other value'
+});
+
+```
+
+2. В отличие от `this.setState` в классовых компонентах, `useState` не объединяет объекты , когда состояние обновилось. Оно заменяет их.
+
+```jsx
+/* после этого personState будет объектом, который содержит свойства persons и otherState */
+
+const [personsState, setPersonsState] = useState({
+    persons: [
+        {name: "Max", age: 29},
+        {name: "Andrew", age: 22},
+        {name: "Alice", age: 25}
+    ],
+    otherState: 'some other value'
+});
+
+
+/* после этого personState будет объектом, содержащим только свойство persons */
 setPersonState({
     [
         {name: "Maximilian", age: 29},
