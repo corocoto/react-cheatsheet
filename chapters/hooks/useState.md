@@ -35,7 +35,7 @@ const [personsState, setPersonsState] = useState({
 });
 ```
 
-At example above `pesonState` contains next structure (initial state):
+At example above `pesonsState` contains next structure (initial state):
 
 ```jsx
 persons: [
@@ -101,7 +101,7 @@ setPersonState({
 
 #### Объявление этого хука
 
-1. `useState` является именнованным значением из `export`'а  `react`, поэтому, для того, чтобы использовать его, вы можете написать:
+1. `useState` является именнованным значением из `export`'а  `react`, поэтому для того, чтобы использовать его, вы можете написать:
 ```jsx
 React.useState
 ```
@@ -112,8 +112,8 @@ import React, { useState } from 'react';
 
 #### Что он содержит внутри?
 
-`useState` не возвращает просто переменную. Он возвращает `массив`, где первый элемент - это стояние переменной, а второй - `функция` для обновления значения переменной. 
-Для таких случаев, обычно используется  **деструктуризация массива**:
+`useState` не возвращает просто переменную. Он возвращает `массив`, где первый элемент - это состояние переменной, а второй - `функция` для обновления значения переменной. 
+Для таких случаев обычно используется  **деструктуризация массива**:
 
 ```jsx
 const [personsState, setPersonsState] = useState({
@@ -125,7 +125,7 @@ const [personsState, setPersonsState] = useState({
 });
 ```
 
-В примере выше `pesonState` содержит следующую структуру next structure (первоначальное состояние):
+В примере выше `pesonsState` содержит следующую структуру (первоначальное состояние):
 
 ```jsx
 persons: [
