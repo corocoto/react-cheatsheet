@@ -47,7 +47,7 @@ This repo is contains some useful opportunities for work with React.js library.
 10. Styling (Стилизация):
     * [Dynamic styling components (Динамическая стилизация компонентов)](chapters/styling/dynamic_styling.md)  
     * [Using pseudo classes, pseudo elements and media queries in inline styles (Использование псевдоклассов, псевдоэлементов и медиа выражений в inline-стилях)](chapters/styling/radium.md) 
-    * [`styled-components` library (библиотека `styled-components`)](chapters/styling/styled-components.md) 
+    * [**styled-components** library (библиотека **styled-components**)](chapters/styling/styled-components.md) 
     * [Adding isolating styles using CSS Modules (Добавление изолирующих стилей, используя CSS Modules)](chapters/styling/css_modules.md)   
 11. Debugging React Apps (Отладка React-приложений):
     * [Error Boundary](chapters/debug/error_boundary.md)
