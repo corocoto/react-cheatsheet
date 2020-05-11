@@ -1,10 +1,12 @@
-### React.memo
+## React.memo
 
 ```jsx
 const MyComponent = React.memo(function MyComponent(props) {
   /* рендер с использованием пропсов */
 });
 ```
+
+[EN]
 
 `React.memo` is the HOC (Higher Order Component). It's looks like on the `React.PureComponent`, but using for functional components.
 
@@ -30,4 +32,32 @@ function areEqual(prevProps, nextProps) {
 export default React.memo(MyComponent, areEqual);
 ```
 
->**Note:**  function `areEqual` returns `true` if `props` are equal, and `false` value if `props` don't equal, `shouldComponent()` method for class-based components unlike.
+>**Note:**  function `areEqual` returns `true` if `props` are equal, and `false` value if `props` don't equal (`shouldComponentUpdate()` method for class-based components unlike).
+
+[RU]
+
+`React.memo` - это HOC (Компонент Высшего Порядка). Он выглядит, как `React.PureComponent`, но используется для функциоанльных компонентов.
+
+Если ваш функциональный компонент всегда отрисовывал тот же результат для тех же `props`, тогда вы можете обернуть его в `React.memo`, вызывая который улучшает производительность в некоторых случаях, запоминая результат. 
+
+Это подразумевает, что React будет использовать последний отрисованный результат, изебгая повторной отрисовки.
+
+`React.memo` срабатывает (влияет) только при изменении `props`. Если функциональный компонент обернут в `React.memo` aи использует один из хуков (`useState` или `useContext`), тогда он будет повторно отрисовываться, когда контекст или состяние изменятся.
+
+По умолчанию, он сравнивает вложенные объекты поверхностно. Если вы хотите контролировать сравнение, вы можете передать вашу функцию сравнения в качестве второго аргумента.
+
+```jsx
+function MyComponent(props) {
+  /* рендер с использованием пропсов */
+}
+function areEqual(prevProps, nextProps) {
+  /*
+  возвращает true, если nextProps рендерит
+  тот же результат что и prevProps,
+  иначе возвращает false
+  */
+}
+export default React.memo(MyComponent, areEqual);
+```
+
+>**Примечание:** функция `areEqual` возвращает `true`, если `props` равны, и значение `false`, если `props` не равны (замена методу `shouldComponentUpdate()` для классового компонента).

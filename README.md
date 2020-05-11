@@ -55,16 +55,16 @@ This repo is contains some useful opportunities for work with React.js library.
 13. Optimizations (Оптимизации):
     * [React.memo](chapters/optimization/react_memo.md)
     * [React.Component vs React.PureComponent](chapters/optimization/component_vs_purecomponent.md)
-    * lazyLoading
+    * [Lazy Loading (Ленивая загрузка)](chapters/optimization/lazy_loading.md)
 14. [Ref](chapters/ref/ref.md)
-15. [Context](chapters/context/context.md)
-16. Suspense
-17. Single Page Application (SPA)
+15. [Context (Контекст)](chapters/context/context.md)
+17. Single Page Application (SPA):
+    * [`react-router-dom` package (пакет `react-router-dom`)](chapters/spa/react-router-dom.md)
+    * [BrowserRouter](chapters/spa/browser-router.md)
+    * [Route](chapters/spa/route.md)
     * Link
     * NavLink
-    * Route
     * Switch
-    * BrowserRouter
     * Redirect
     * Hooks:
         * withRouter
