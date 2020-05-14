@@ -62,9 +62,9 @@ This repo is contains some useful opportunities for work with React.js library.
     * [`react-router-dom` package (пакет `react-router-dom`)](chapters/spa/react-router-dom.md)
     * [BrowserRouter](chapters/spa/browser-router.md)
     * [Route](chapters/spa/route.md)
-    * Link
-    * NavLink
-    * Switch
+    * [Link](chapters/spa/link.md)
+    * [NavLink](chapters/spa/navlink.md)
+    * [Switch](chapters/spa/switch.md)
     * Redirect
     * Hooks:
         * withRouter
