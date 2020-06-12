@@ -1,4 +1,4 @@
-# React.js tips and tricks cheatsheet
+# React.js cheatsheet
 
 [EN]
 
