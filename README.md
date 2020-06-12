@@ -65,7 +65,7 @@ This repo is contains some useful opportunities for work with React.js library.
     * [Link](chapters/spa/link.md)
     * [NavLink](chapters/spa/navlink.md)
     * [Switch](chapters/spa/switch.md)
-    * Redirect
-    * Hooks:
-        * withRouter
+    * [Redirect](chapters/spa/redirect.md)
+    * HOC:
+        * [withRouter](chapters/spa/hoc/with-router.md)
 18. Redux        
