@@ -23,8 +23,13 @@
    **Example**:
    
   ```jsx
-      <Redirect
-        to={{ pathname: "/login",search: "?utm=your+face",state: {referrer: currentLocation} }}/>
+      const data = { 
+          pathname: "/login",
+          search: "?utm=your+face",
+          state: {referrer: currentLocation} 
+      };
+      ...
+      <Redirect to={data}/>
    ```         
 
 * **from: string**
