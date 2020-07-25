@@ -24,12 +24,7 @@
    
   ```jsx
       <Redirect
-        to={{
-          pathname: "/login",
-          search: "?utm=your+face",
-          state: { referrer: currentLocation }
-        }}
-      />
+        to={{ pathname: "/login",search: "?utm=your+face",state: {referrer: currentLocation} }}/>
    ```         
 
 * **from: string**
